@@ -1,0 +1,143 @@
+"""
+Python tutorial - Code for the 7 topics
+"""
+
+# ============================================================
+# 1. Introduction to Programming
+# ============================================================
+print("=== 1. Introduction to Programming ===")
+# A program is a list of instructions the computer follows
+# one by one, from top to bottom.
+print("Hello, World!")
+print("This is my first program.")
+
+
+# ============================================================
+# 2. Python Basic Syntax
+# ============================================================
+print("\n=== 2. Python Basic Syntax ===")
+# This is a comment: Python does not run it
+
+name = "John"        # str (text)
+age = 18             # int (whole number)
+height = 1.65        # float (has a decimal)
+is_student = True    # bool (True or False)
+
+print(name, age, height, is_student)
+print(type(name), type(age), type(height), type(is_student))
+
+# Indentation defines a "block" in Python
+if age >= 18:
+    print("You are of legal age.")
+
+
+# ============================================================
+# 3. Arithmetic Operators and Expressions
+# ============================================================
+print("\n=== 3. Arithmetic Operators and Expressions ===")
+a, b = 17, 5
+
+print("a + b  =", a + b)    # Addition
+print("a - b  =", a - b)    # Subtraction
+print("a * b  =", a * b)    # Multiplication
+print("a / b  =", a / b)    # Division (always returns a float)
+print("a // b =", a // b)   # Floor division
+print("a % b  =", a % b)    # Modulus (remainder)
+print("a ** b =", a ** b)   # Exponent
+
+# Order of operations (PEMDAS)
+print("2 + 3 * 4   =", 2 + 3 * 4)     # 14
+print("(2 + 3) * 4 =", (2 + 3) * 4)   # 20
+
+# Compound assignment
+score = 10
+score += 5
+score *= 2
+print("score =", score)     # 30
+
+
+# ============================================================
+# 4. Basic Input and Output in Python
+# ============================================================
+print("\n=== 4. Basic Input and Output ===")
+user_name = input("What is your name? ")
+user_age = int(input("How old are you? "))   # int() converts text to a number
+
+print("Hello,", user_name + "!")
+print(f"Next year, you will be {user_age + 1} years old.")
+
+
+# ============================================================
+# 5. Conditional Statements in Python
+# ============================================================
+print("\n=== 5. Conditional Statements ===")
+grade = int(input("Enter your grade (0-100): "))
+
+if grade >= 90:
+    print("Excellent!")
+elif grade >= 75:
+    print("You passed!")
+else:
+    print("You failed. Try again!")
+
+
+# ============================================================
+# 6. Logical Operators
+# ============================================================
+print("\n=== 6. Logical Operators ===")
+temperature = 30
+is_raining = False
+
+# and -> both must be True
+if temperature > 28 and not is_raining:
+    print("Great weather for swimming!")
+
+# or -> at least one must be True
+if is_raining or temperature < 20:
+    print("It's better to stay home.")
+else:
+    print("You can go outside.")
+
+# not -> reverses the value
+print("not True       =", not True)
+print("True and False =", True and False)
+print("True or False  =", True or False)
+
+
+# ============================================================
+# 7. Introduction to Iteration and Loops
+# ============================================================
+print("\n=== 7. Iteration and Loops ===")
+
+# for loop
+print("For loop (1 to 5):")
+for i in range(1, 6):
+    print(i, end=" ")
+print()
+
+# while loop
+print("While loop (countdown):")
+count = 3
+while count > 0:
+    print(count)
+    count -= 1
+print("Liftoff!")
+
+# Looping through a list
+fruits = ["mango", "banana", "grapes"]
+for fruit in fruits:
+    print("Fruit:", fruit)
+
+# break and continue
+for n in range(1, 10):
+    if n == 3:
+        continue    # skip 3
+    if n == 7:
+        break       # stop at 7
+    print("n =", n)
+
+# Multiplication table
+num = 4
+print(f"\nMultiplication table of {num}:")
+for i in range(1, 11):
+    print(f"{num} x {i} = {num * i}")
