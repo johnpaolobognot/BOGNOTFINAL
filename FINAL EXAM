@@ -1,143 +1,93 @@
-"""
-Python tutorial - Code for the 7 topics
-"""
+while True:
+    print("\n" + "=" * 30)
+    print(" PYTHON TUTORIAL ")
+    print("=" * 30)
+    print("1. Introduction to Programming")
+    print("2. Python Basic Syntax")
+    print("3. Arithmetic Operators and Expressions")
+    print("4. Basic Input and Output in Python")
+    print("5. Conditional Statements in Python")
+    print("6. Logical Operators")
+    print("7. Introduction to Iteration and Loops")
+    print("0. Exit")
+    print("=" * 30)
 
-# ============================================================
-# 1. Introduction to Programming
-# ============================================================
-print("=== 1. Introduction to Programming ===")
-# A program is a list of instructions the computer follows
-# one by one, from top to bottom.
-print("Hello, World!")
-print("This is my first program.")
+    choice = input("Choose lesson: ")
 
+    if choice == "LESSON1":
+        print("\n=== INTRODUCTION TO PROGRAMMING ===")
+        print("Programming is giving instructions to a computer.")
+        print("Python is a programming language.")
+        print("\nExample:")
+        print('print("Hello World!")')
+        print("Output: Hello World!")
 
-# ============================================================
-# 2. Python Basic Syntax
-# ============================================================
-print("\n=== 2. Python Basic Syntax ===")
-# This is a comment: Python does not run it
+    elif choice == "LESSON 2":
+        print("\n=== PYTHON BASIC SYNTAX ===")
+        print("Syntax refers to the rules of writing code.")
+        print("\nExample:")
+        print('name = "John"')
+        print("age = 18")
+        print("print(name)")
+        print("Output: John")
 
-name = "John"        # str (text)
-age = 18             # int (whole number)
-height = 1.65        # float (has a decimal)
-is_student = True    # bool (True or False)
+    elif choice == "LESSON 3":
+        print("\n=== ARITHMETIC OPERATORS ===")
+        print("+ Addition")
+        print("- Subtraction")
+        print("* Multiplication")
+        print("/ Division")
+        print("// Floor Division")
+        print("% Modulus")
+        print("** Exponentiation")
+        print("\nOPERATORS:")
+        print("10 + 5 = 15")
+        print("10 * 5 = 50")
 
-print(name, age, height, is_student)
-print(type(name), type(age), type(height), type(is_student))
+    elif choice == "LESSON 4":
+        print("\n=== BASIC INPUT AND OUTPUT ===")
+        print("input() is used to receive information.")
+        print("print() is used to display information.")
+        print("\nINPUT/OUTPUT:")
+        print('name = input("Enter name: ")')
+        print('print("Hello", NAME)')
 
-# Indentation defines a "block" in Python
-if age >= 18:
-    print("You are of legal age.")
+    elif choice == "LESSON5":
+        print("\n=== CONDITIONAL STATEMENTS ===")
+        print("Conditional statements are used for decisions.")
+        print("if - checks a condition.")
+        print("elif - checks another condition.")
+        print("else - executes when conditions are false.")
+        print("\nCONDITIONAL:")
+        print("age = 18")
+        print("if age >= 18:")
+        print(' print("Adult")')
+        print("else:")
+        print(' print("Minor")')
 
+    elif choice == "LESSON6":
+        print("\n=== LOGICAL OPERATORS ===")
+        print("and - Both conditions must be true.")
+        print("or - At least one condition must be true.")
+        print("not - Reverses the condition.")
+        print("\nLOGICAL:")
+        print("print(5 > 2 and 10 > 5)")
+        print("Output: True")
 
-# ============================================================
-# 3. Arithmetic Operators and Expressions
-# ============================================================
-print("\n=== 3. Arithmetic Operators and Expressions ===")
-a, b = 17, 5
+    elif choice == "LESSON7":
+        print("\n=== ITERATION AND LOOPS ===")
+        print("Loops are used to repeat instructions.")
+        print("For loop and While loop.")
+        print("\nINTERATION:")
+        print("for i in range(1, 6):")
+        print(" print(i)")
+        print("Output: 1 2 3 4 5")
 
-print("a + b  =", a + b)    # Addition
-print("a - b  =", a - b)    # Subtraction
-print("a * b  =", a * b)    # Multiplication
-print("a / b  =", a / b)    # Division (always returns a float)
-print("a // b =", a // b)   # Floor division
-print("a % b  =", a % b)    # Modulus (remainder)
-print("a ** b =", a ** b)   # Exponent
+    elif choice == "0":
+        print("\nThank you for using Python Tutorial System!")
+        break
 
-# Order of operations (PEMDAS)
-print("2 + 3 * 4   =", 2 + 3 * 4)     # 14
-print("(2 + 3) * 4 =", (2 + 3) * 4)   # 20
+    else:
+        print("\nInvalid choice! Please choose only 1-7.")
 
-# Compound assignment
-score = 10
-score += 5
-score *= 2
-print("score =", score)     # 30
-
-
-# ============================================================
-# 4. Basic Input and Output in Python
-# ============================================================
-print("\n=== 4. Basic Input and Output ===")
-user_name = input("What is your name? ")
-user_age = int(input("How old are you? "))   # int() converts text to a number
-
-print("Hello,", user_name + "!")
-print(f"Next year, you will be {user_age + 1} years old.")
-
-
-# ============================================================
-# 5. Conditional Statements in Python
-# ============================================================
-print("\n=== 5. Conditional Statements ===")
-grade = int(input("Enter your grade (0-100): "))
-
-if grade >= 90:
-    print("Excellent!")
-elif grade >= 75:
-    print("You passed!")
-else:
-    print("You failed. Try again!")
-
-
-# ============================================================
-# 6. Logical Operators
-# ============================================================
-print("\n=== 6. Logical Operators ===")
-temperature = 30
-is_raining = False
-
-# and -> both must be True
-if temperature > 28 and not is_raining:
-    print("Great weather for swimming!")
-
-# or -> at least one must be True
-if is_raining or temperature < 20:
-    print("It's better to stay home.")
-else:
-    print("You can go outside.")
-
-# not -> reverses the value
-print("not True       =", not True)
-print("True and False =", True and False)
-print("True or False  =", True or False)
-
-
-# ============================================================
-# 7. Introduction to Iteration and Loops
-# ============================================================
-print("\n=== 7. Iteration and Loops ===")
-
-# for loop
-print("For loop (1 to 5):")
-for i in range(1, 6):
-    print(i, end=" ")
-print()
-
-# while loop
-print("While loop (countdown):")
-count = 3
-while count > 0:
-    print(count)
-    count -= 1
-print("Liftoff!")
-
-# Looping through a list
-fruits = ["mango", "banana", "grapes"]
-for fruit in fruits:
-    print("Fruit:", fruit)
-
-# break and continue
-for n in range(1, 10):
-    if n == 3:
-        continue    # skip 3
-    if n == 7:
-        break       # stop at 7
-    print("n =", n)
-
-# Multiplication table
-num = 4
-print(f"\nMultiplication table of {num}:")
-for i in range(1, 11):
-    print(f"{num} x {i} = {num * i}")
+    input("\nPress Enter to return to menu...")
